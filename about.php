@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | WindedgeSoft</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon_io/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <title>About | Windedgesoft</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon_io/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap 5.3.7 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome (locally hosted) -->
   <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="assets/plugins/bs4-timeline/css/style.css">
+
+  <!-- Timeline CSS (custom — make sure it's Bootstrap 5 friendly) -->
+  <link rel="stylesheet" href="plugins/how-we-work-timeline/css/style.css">
+
+  <!-- Custom Theme -->
+  <link rel="stylesheet" href="assets/dist/css/windedgesoft.css">
 </head>
+
 <body>
-<!-- Header -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" id="mainNav">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="assets/img/logo_icon.png" alt="Logo" width="30" height="30" class="me-2">
-      <span class="fw-semibold">WindedgeSoft</span>
+      <span class="fw-semibold">Windedgesoft</span>
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -29,10 +40,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link active" aria-current="page" href="about.php">About</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,38 +63,166 @@
     </div>
   </div>
 </nav>
-<!-- /.header -->
 
 <!-- Hero -->
-<section class="vh-100 d-flex align-items-center justify-content-center text-center bg-dark text-light">
-  <div>
-    <h1 class="display-4 fw-bold">Hold Your Horses :)</h1>
-    <p class="lead">You'll get to know us;</p>
-
-    <a href="index.php" class="btn btn-primary btn-lg mt-3 rounded-pill px-4"><i class="fas fa-home"></i></a>
+<section class="hero-short py-5 text-center bg-dark text-light">
+  <div class="container">
+    <h1 class="display-5 fw-bold">About Windedgesoft</h1>
+    <p class="lead text-white-50">Smart. Fast. Unapologetically Clean Code.</p>
   </div>
 </section>
-<!-- /. hero -->
 
-<!-- Footer -->
-<footer class="footer text-white bg-dark py-3">
-  <div class="container ">
-    <div class="row">
-      <div class="col-6">
-        <p>&copy; 2025 WindedgeSoft. All Rights Reserved.</p>
+<!-- Who we are -->
+<section class="py-5 bg-light" id="who-we-are">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="assets/img/team-collab.jpg" alt="Windedgesoft Team" class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-6  text-right">
-        <div>
-          <a href="https://github.com/windedgesoft" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/windedgesoft" target="_blank" class="text-white mx-2"><i class="fab fa-x-twitter"></i></a>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Who We Are</h2>
+        <p class="text-muted lead">Windedgesoft is a tight-knit crew of developers, designers, and digital strategists based in Kenya. We believe great software should be invisible — doing its job flawlessly without getting in your way.</p>
+        <p class="text-muted">From startups to growing enterprises, we help businesses simplify workflows, wow users, and ship scalable tech solutions fast. Our stack is modern, our approach is pragmatic, and our code is dangerously clean.</p>
+        <a href="#contact" class="btn btn-primary rounded-pill mt-3">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h3 class="fw-bold text-primary">30+</h3>
+        <p class="text-muted mb-0">Custom Systems Delivered</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold text-primary">98%</h3>
+        <p class="text-muted mb-0">Client Satisfaction Rate</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold text-primary">∞</h3>
+        <p class="text-muted mb-0">Bugs Squashed (and counting)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-white" id="team">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Meet the Team</h2>
+    <p class="lead text-muted mb-5">Brains, builders, and a little bit of brilliance. This is the crew behind the magic.</p>
+
+    <div class="row g-4">
+      <!-- Team Member 1 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 team-card">
+          <img src="assets/img/team/john.jpg" class="card-img-top" alt="John Doe">
+          <div class="card-body">
+            <h5 class="card-title mb-1">John Doe</h5>
+            <p class="text-muted small mb-2">Lead Full-Stack Developer</p>
+            <div>
+              <a href="#" class="text-secondary me-2"><i class="fab fa-github"></i></a>
+              <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 team-card">
+          <img src="assets/img/team/jane.jpg" class="card-img-top" alt="Jane Kamau">
+          <div class="card-body">
+            <h5 class="card-title mb-1">Jane Kamau</h5>
+            <p class="text-muted small mb-2">UI/UX Designer</p>
+            <div>
+              <a href="#" class="text-secondary me-2"><i class="fab fa-behance"></i></a>
+              <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 team-card">
+          <img src="assets/img/team/eric.jpg" class="card-img-top" alt="Eric M.">
+          <div class="card-body">
+            <h5 class="card-title mb-1">Eric M.</h5>
+            <p class="text-muted small mb-2">Founder & Systems Architect</p>
+            <div>
+              <a href="https://github.com/its-erk" target="_blank" class="text-secondary me-2"><i class="fab fa-github"></i></a>
+              <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Company Info -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold text-uppercase mb-3">Windedgesoft</h5>
+        <p class="text-white-50 small">Smart software, built fast. We specialize in intuitive systems and beautiful user interfaces.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-semibold text-uppercase mb-3">Quick Links</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li><a href="about.php" class="text-white-50 text-decoration-none">About</a></li>
+          <li><a href="#projects" class="text-white-50 text-decoration-none">Projects</a></li>
+          <li><a href="#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
+          <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-uppercase mb-3">Connect</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li><i class="fas fa-envelope me-2"></i> hello@windedgesoft.com</li>
+          <li><i class="fas fa-phone me-2"></i> +254 712 345 678</li>
+        </ul>
+        <div class="mt-3">
+          <a href="https://linkedin.com" target="_blank" class="text-white-50 me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://github.com/its-erk" target="_blank" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://twitter.com/windedgesoft" target="_blank" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-secondary my-4">
+
+    <!-- Bottom Row -->
+    <div class="text-center small text-white-50">
+      &copy; 2025 Windedgesoft. All rights reserved.
     </div>
   </div>
 </footer>
 <!-- /.footer -->
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<!-- Windedgesoft.js -->
+<script src="assets/dist/js/windedgesoft.js"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@
 <section id="services" class="py-5 text-center">
   <div class="container">
     <h2 class="fw-bold mb-4">What We Build (And Why You'll Love It)</h2>
-    <p class="text-muted mb-5">We specialize in crafting efficient, good-looking, and dangerously addictive digital tools.</p>
+    <p class="lead text-muted mb-5">We specialize in crafting efficient, good-looking, and dangerously addictive digital tools.</p>
 
     <div class="row g-4">
       <div class="col-md-4">
@@ -120,7 +120,7 @@
 <section class="py-5 bg-light text-center" id="how-we-work">
   <div class="container">
     <h2 class="fw-bold mb-4">How We Work</h2>
-    <p class="text-muted mb-5">We turn your idea into a fully functioning solution with minimal fuss and maximum polish.</p>
+    <p class="lead text-muted mb-5">We turn your idea into a fully functioning solution with minimal fuss and maximum polish.</p>
 
     <div class="timeline position-relative">
 
@@ -192,40 +192,40 @@
 
 
 <!-- Testimonials -->
-<section class="py-5 text-center">
+<section class="py-5 text-center" id="testimonials">
   <div class="container">
     <h2 class="fw-bold mb-4">What Our Clients Say</h2>
-    <p class="text-muted mb-5">A few words from the people who trust us with their tech.</p>
+    <p class="lead text-muted mb-5">A few words from the people who trust us with their tech.</p>
 
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card h-100 bg-light border-0">
+        <div class="card testimonial-card h-100">
           <div class="card-body">
-            <i class="fas fa-user-alt fa-3x text-muted"></i>
-            <p class="card-text">“Working with Windedgesoft felt like having an in-house team. Fast, focused, and full of smart ideas.”</p>
-            <h6 class="card-title mt-3 mb-0">Brian M., Operations Lead</h6>
+            <i class="fas fa-user-alt avatar-icon"></i>
+            <p class="card-text mt-3">“Working with Windedgesoft felt like having an in-house team. Fast, focused, and full of smart ideas.”</p>
+            <h6 class="card-title mt-4 mb-0">Brian M., Operations Lead</h6>
             <p class="text-muted small">Nairobi Retail Systems</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card h-100 bg-light border-0">
+        <div class="card testimonial-card h-100">
           <div class="card-body">
-            <i class="fas fa-user-alt fa-3x text-muted"></i>
-            <p class="card-text">“They took our half-baked concept and turned it into a beautiful, working platform. Clients love it.”</p>
-            <h6 class="card-title mt-3 mb-0">Cynthia O., Co-Founder</h6>
+            <i class="fas fa-user-alt avatar-icon"></i>
+            <p class="card-text mt-3">“They took our half-baked concept and turned it into a beautiful, working platform. Clients love it.”</p>
+            <h6 class="card-title mt-4 mb-0">Cynthia O., Co-Founder</h6>
             <p class="text-muted small">VibeTicket Africa</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card h-100 bg-light border-0">
+        <div class="card testimonial-card h-100">
           <div class="card-body">
-            <i class="fas fa-user-alt fa-3x text-muted"></i>
-            <p class="card-text">“Solid backend, clean UI, delivered on time. Can’t ask for more.”</p>
-            <h6 class="card-title mt-3 mb-0">David K., CTO</h6>
+            <i class="fas fa-user-alt avatar-icon"></i>
+            <p class="card-text mt-3">“Solid backend, clean UI, delivered on time. Can’t ask for more.”</p>
+            <h6 class="card-title mt-4 mb-0">David K., CTO</h6>
             <p class="text-muted small">LogiStack Solutions</p>
           </div>
         </div>
@@ -233,17 +233,16 @@
     </div>
   </div>
 </section>
-<!-- /.testimonials -->
 
 <!-- Stuff We've Built -->
 <section class="py-5 bg-light text-center" id="projects">
   <div class="container">
     <h2 class="fw-bold mb-4">Projects We’re Proud Of</h2>
-    <p class="text-muted mb-5">Here’s a quick look at some of our recent work — designed with care, built to perform.</p>
+    <p class="lead text-muted mb-5">Here’s a quick look at some of our recent work — designed with care, built to perform.</p>
 
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card shadow-sm h-100">
+        <div class="card shadow-sm h-100 project-card">
           <img src="assets/img/cover.png" class="card-img-top" alt="Project 1">
           <div class="card-body text-start">
             <h5 class="card-title">ITS</h5>
@@ -256,7 +255,7 @@
      </div>
 
      <div class="col-md-4">
-      <div class="card shadow-sm h-100">
+      <div class="card shadow-sm h-100 project-card">
         <img src="assets/img/cover.png" class="card-img-top" alt="Project 2">
         <div class="card-body text-start">
           <h5 class="card-title">AviziTrack</h5>
@@ -269,7 +268,7 @@
     </div>
 
     <div class="col-md-4">
-      <div class="card shadow-sm h-100">
+      <div class="card shadow-sm h-100 project-card">
         <img src="assets/img/cover.png" class="card-img-top" alt="Project 3">
         <div class="card-body text-start">
           <h5 class="card-title">MyJibaba</h5>
@@ -283,24 +282,75 @@
   </div>
 </div>
 </section>
-<!-- /.stuff we've built -->
 
-<section id="contact" class="py-5 text-center bg-white">
+<!-- Contact section -->
+<section id="contact" class="py-5 text-center bg-white position-relative">
   <div class="container">
-    <h2 class="fw-bold mb-4">Let’s Build Something Brilliant</h2>
-    <p class="mb-4 text-muted">Got a project idea, startup dream, or just curious about how we can help? Drop us a line.</p>
+    <h2 class="fw-bold mb-3">Let’s Build Something Brilliant</h2>
+    <p class="lead text-muted mb-5">Got a project idea, startup dream, or just curious about how we can help? Let’s talk.</p>
 
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="mailto:hello@windedgesoft.com" class="btn btn-outline-primary rounded-pill px-4"><i class="fas fa-envelope"></i> Email Us</a>
-      <a href="https://wa.me/2547XXXXXXXX" class="btn btn-outline-success rounded-pill px-4" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <button class="btn btn-primary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#messageModal"><i class="fas fas fa-paper-plane"></i> Send a Quick Message</button>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="mailto:hello@windedgesoft.com" class="btn contact-btn btn-outline-primary rounded-pill">
+        <i class="fas fa-envelope me-2"></i> Email Us
+      </a>
+
+      <a href="https://wa.me/2547XXXXXXXX" class="btn contact-btn btn-outline-success rounded-pill" target="_blank">
+        <i class="fab fa-whatsapp me-2"></i> WhatsApp
+      </a>
+
+      <button class="btn contact-btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#messageModal">
+        <i class="fas fa-paper-plane me-2"></i> Send a Quick Message
+      </button>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer bg-black small text-center text-white-50">
-  <div class="container px-4 px-lg-5 py-3">&copy; 2025 Windedgesoft</div>
+<footer class="footer bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Company Info -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold text-uppercase mb-3">Windedgesoft</h5>
+        <p class="text-white-50 small">Smart software, built fast. We specialize in intuitive systems and beautiful user interfaces.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="fw-semibold text-uppercase mb-3">Quick Links</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li><a href="about.php" class="text-white-50 text-decoration-none">About</a></li>
+          <li><a href="#projects" class="text-white-50 text-decoration-none">Projects</a></li>
+          <li><a href="#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
+          <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-uppercase mb-3">Connect</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li><i class="fas fa-envelope me-2"></i> hello@windedgesoft.com</li>
+          <li><i class="fas fa-phone me-2"></i> +254 712 345 678</li>
+        </ul>
+        <div class="mt-3">
+          <a href="https://linkedin.com" target="_blank" class="text-white-50 me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://github.com/its-erk" target="_blank" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://twitter.com/windedgesoft" target="_blank" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-secondary my-4">
+
+    <!-- Bottom Row -->
+    <div class="text-center small text-white-50">
+      &copy; 2025 Windedgesoft. All rights reserved.
+    </div>
+  </div>
 </footer>
 <!-- /.footer -->
 

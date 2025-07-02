@@ -41,6 +41,27 @@
   z-index: 2;
 }
 
+.hero-short {
+  background-image: url('../../../assets/img/2175196.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-short::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.hero-short .container {
+  position: relative;
+  z-index: 2;
+}
+
+
 /* Fancy card transition */
 .fancy-card {
   border: none;
@@ -120,3 +141,119 @@
   box-shadow: 0 0 0 4px #e7f1ff;
   position: relative;
 }
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(13, 110, 253, 0.15);
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(13, 110, 253, 0.05), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.testimonial-card:hover::before {
+  left: 100%;
+}
+
+.testimonial-card .card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+  background: #e7f1ff;
+  border-radius: 50%;
+  padding: 0.75rem;
+  box-shadow: 0 0 0 4px #f0f8ff;
+}
+
+.project-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.15);
+}
+
+.project-card img {
+  object-fit: cover;
+  height: 180px;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card .card-body {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem;
+}
+
+.project-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.project-card .card-footer {
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border-top: none;
+  z-index: 2;
+}
+
+.project-card a.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.project-card a.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.team-card img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.team-card .card-body {
+  padding-top: 1rem;
+}
+
+
+/* wBlog */
