@@ -8,3 +8,9 @@ window.addEventListener("scroll", function () {
     navbar.classList.add("navbar-dark", "bg-transparent");
   }
 });
+
+window.addEventListener("scroll", function () {
+  const scrolled = window.scrollY;
+  const hero = document.querySelector(".hero");
+  hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+});
