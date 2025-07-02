@@ -27,7 +27,7 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" id="mainNav">
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="assets/img/logo_icon.png" alt="Logo" width="30" height="30" class="me-2">
       <span class="fw-semibold">Windedgesoft</span>
@@ -76,7 +76,7 @@
 <!-- /. hero -->
 
 <!-- Services -->
-<section id="services" class="py-5 bg-light text-center">
+<section id="services" class="py-5 text-center">
   <div class="container">
     <h2 class="fw-bold mb-4">What We Build (And Why You'll Love It)</h2>
     <p class="text-muted mb-5">We specialize in crafting efficient, good-looking, and dangerously addictive digital tools.</p>
@@ -117,96 +117,82 @@
 </section>
 
 <!-- How we work -->
-<section class="py-5 text-center bg-white">
+<section class="py-5 bg-light text-center" id="how-we-work">
   <div class="container">
     <h2 class="fw-bold mb-4">How We Work</h2>
     <p class="text-muted mb-5">We turn your idea into a fully functioning solution with minimal fuss and maximum polish.</p>
 
-    <!-- Step 1 -->
-    <div class="row align-items-center how-it-works d-flex">
-      <div class="col-2 text-center d-inline-flex justify-content-center align-items-center">
-        <div class="circle font-weight-bold"><i class="fas fa-lightbulb"></i></div>
-      </div>
-      <div class="col-6 text-left">
-        <h5>1. Discover</h5>
-        <p>We listen, ask smart questions, and get to know your goals. No buzzwords. Just clarity.</p>
-      </div>
-    </div>
-    <!-- Path 1-2 -->
-    <div class="row timeline">
-      <div class="col-2">
-        <div class="corner top-right"></div>
-      </div>
-      <div class="col-8">
-        <hr />
-      </div>
-      <div class="col-2">
-        <div class="corner left-bottom"></div>
-      </div>
-    </div>
+    <div class="timeline position-relative">
 
-    <!-- Step 2 -->
-    <div class="row align-items-center justify-content-end how-it-works d-flex">
-      <div class="col-6 text-right">
-        <h5>2. Design</h5>
-        <p>We sketch wireframes, map user journeys, and draft slick interfaces you'll actually like using.</p>
+      <!-- Step 1 -->
+      <div class="row timeline-item">
+        <div class="col-md-6 text-md-end text-center">
+          <div class="timeline-content p-3 rounded bg-white shadow-sm d-inline-block">
+            <h5>1. Discover</h5>
+            <p>We listen, ask smart questions, and get to know your goals. No buzzwords. Just clarity.</p>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative text-center">
+          <span class="timeline-icon">
+            <i class="fas fa-lightbulb"></i>
+          </span>
+        </div>
       </div>
-      <div class="col-2 text-center d-inline-flex justify-content-center align-items-center">
-        <div class="circle font-weight-bold"><i class="fas fa-pencil-ruler"></i></div>
-      </div>
-    </div>
-    <!-- Path 2-3 -->
-    <div class="row timeline">
-      <div class="col-2">
-        <div class="corner right-bottom"></div>
-      </div>
-      <div class="col-8">
-        <hr />
-      </div>
-      <div class="col-2">
-        <div class="corner top-left"></div>
-      </div>
-    </div>
 
-    <!-- Step 3 -->
-    <div class="row align-items-center how-it-works d-flex">
-      <div class="col-2 text-center d-inline-flex justify-content-center align-items-center">
-        <div class="circle font-weight-bold"><i class="fas fa-code"></i></div>
+      <!-- Step 2 -->
+      <div class="row timeline-item flex-md-row-reverse">
+        <div class="col-md-6 text-md-start text-center">
+          <div class="timeline-content p-3 rounded bg-white shadow-sm d-inline-block">
+            <h5>2. Design</h5>
+            <p>We sketch wireframes, map user journeys, and draft slick interfaces you'll actually like using.</p>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative text-center">
+          <span class="timeline-icon">
+            <i class="fas fa-pencil-ruler"></i>
+          </span>
+        </div>
       </div>
-      <div class="col-6 text-left">
-        <h5>3. Develop</h5>
-        <p>Here comes the code — clean, secure, and built to scale. We keep you in the loop as we ship fast.</p>
-      </div>
-    </div>
-    <!-- Path 3-4 -->
-    <div class="row timeline">
-      <div class="col-2">
-        <div class="corner top-right"></div>
-      </div>
-      <div class="col-8">
-        <hr />
-      </div>
-      <div class="col-2">
-        <div class="corner left-bottom"></div>
-      </div>
-    </div>
 
-    <!-- Step 4 -->
-    <div class="row align-items-center justify-content-end how-it-works d-flex">
-      <div class="col-6 text-right">
-        <h5>4. Deliver</h5>
-        <p>Launch time. We test, deploy, and support. Your users are happy — and so are you.</p>
+      <!-- Step 3 -->
+      <div class="row timeline-item">
+        <div class="col-md-6 text-md-end text-center">
+          <div class="timeline-content p-3 rounded bg-white shadow-sm d-inline-block">
+            <h5>3. Develop</h5>
+            <p>Here comes the code — clean, secure, and built to scale. We keep you in the loop as we ship fast.</p>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative text-center">
+          <span class="timeline-icon">
+            <i class="fas fa-code"></i>
+          </span>
+        </div>
       </div>
-      <div class="col-2 text-center d-inline-flex justify-content-center align-items-center">
-        <div class="circle font-weight-bold"><i class="fas fa-rocket"></i> </div>
+
+      <!-- Step 4 -->
+      <div class="row timeline-item flex-md-row-reverse">
+        <div class="col-md-6 text-md-start text-center">
+          <div class="timeline-content p-3 rounded bg-white shadow-sm d-inline-block">
+            <h5>4. Deliver</h5>
+            <p>Launch time. We test, deploy, and support. Your users are happy — and so are you.</p>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative text-center">
+          <span class="timeline-icon">
+            <i class="fas fa-rocket"></i>
+          </span>
+        </div>
       </div>
+
+      <!-- Center Line -->
+      <div class="timeline-line d-none d-md-block"></div>
     </div>
   </div>
 </section>
-<!-- /.how we work -->
+
 
 <!-- Testimonials -->
-<section class="py-5 bg-light text-center">
+<section class="py-5 text-center">
   <div class="container">
     <h2 class="fw-bold mb-4">What Our Clients Say</h2>
     <p class="text-muted mb-5">A few words from the people who trust us with their tech.</p>
@@ -250,7 +236,7 @@
 <!-- /.testimonials -->
 
 <!-- Stuff We've Built -->
-<section class="py-5 bg-white text-center" id="projects">
+<section class="py-5 bg-light text-center" id="projects">
   <div class="container">
     <h2 class="fw-bold mb-4">Projects We’re Proud Of</h2>
     <p class="text-muted mb-5">Here’s a quick look at some of our recent work — designed with care, built to perform.</p>
