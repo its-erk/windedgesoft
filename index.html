@@ -241,47 +241,106 @@
     <p class="lead text-muted mb-5">Here’s a quick look at some of our recent work — designed with care, built to perform.</p>
 
     <div class="row g-4">
+
+      <!-- ITS -->
       <div class="col-md-4">
         <div class="card shadow-sm h-100 project-card">
-          <img src="assets/img/cover.png" class="card-img-top" alt="Project 1">
+          <img src="assets/img/cover_gradient.png" class="card-img-top" alt="Project 1">
           <div class="card-body text-start">
             <h5 class="card-title">ITS</h5>
             <p class="card-text">A web based ticketing system built for Intellitech Limited for computer and accessories work orders. Fast, scalable, and secure.</p>
           </div>
-          <div class="card-footer bg-white d-flex border-0">
-           <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">See How It Works</a>
-         </div>
-       </div>
-     </div>
-
-     <div class="col-md-4">
-      <div class="card shadow-sm h-100 project-card">
-        <img src="assets/img/cover.png" class="card-img-top" alt="Project 2">
-        <div class="card-body text-start">
-          <h5 class="card-title">AviziTrack</h5>
-          <p class="card-text">Custom business dashboard for <a href="https://aviziinvestment.co.ke" target="_blank">Avizi Investment</a>. Real-time reports, share, loans, and withdrawal insights. User-friendly UI. Built with PHP + Bootsrap.</p>
-        </div>
-        <div class="card-footer bg-white d-flex border-0">
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore Project</a>
+          <div class="card-footer bg-white d-flex gap-2 border-0">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="ITS - Ticketing System"
+               data-description="A full-stack web-based ticketing system for Intellitech Limited. Allows users to create, track, and close work orders for IT hardware and services. Features include user roles, email notifications, and PDF exports."
+               data-image="assets/img/cover_gradient.png">
+              See How It Works
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card shadow-sm h-100 project-card">
-        <img src="assets/img/cover.png" class="card-img-top" alt="Project 3">
-        <div class="card-body text-start">
-          <h5 class="card-title">MyJibaba</h5>
-          <p class="card-text">An upcoming online shop for Jibaba Solutions. Multi-platform web-based application to be built in Bootsrap, PHP, and MySQLi.</p>
-        </div>
-        <div class="card-footer bg-white d-flex border-0">
-          <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Read Case Study</a>
+      <!-- AviziTrack -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 project-card">
+          <img src="assets/img/cover_gradient.png" class="card-img-top" alt="Project 2">
+          <div class="card-body text-start">
+            <h5 class="card-title">AviziTrack</h5>
+            <p class="card-text">Custom business dashboard for <a href="https://aviziinvestment.co.ke" target="_blank">Avizi Investment</a>. Real-time reports, share, loans, and withdrawal insights. User-friendly UI. Built with PHP + Bootstrap.</p>
+          </div>
+          <div class="card-footer bg-white d-flex flex-wrap gap-2 border-0">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="AviziTrack - Overview"
+               data-description="AviziTrack is a real-time web dashboard designed for Avizi Investment. It provides administrators and users with actionable insights on shares, loans, and savings with an intuitive user interface."
+               data-image="assets/img/cover_gradient.png">
+              Explore Project
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="AviziTrack - Reports Module"
+               data-description="The reports module includes real-time financial summaries, downloadable charts, and dynamic filters for share, loan, and withdrawal records. Ideal for board reports and quick analytics."
+               data-image="assets/img/cover_gradient.png">
+              View Reports
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-success rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="AviziTrack - Admin Features"
+               data-description="Admin features include member management, role assignment, and audit trails. Designed with PHP backend and secure MySQLi transactions."
+               data-image="assets/img/cover_gradient.png">
+              Admin Features
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- MyJibaba -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 project-card">
+          <img src="assets/img/cover_gradient.png" class="card-img-top" alt="Project 3">
+          <div class="card-body text-start">
+            <h5 class="card-title">MyJibaba</h5>
+            <p class="card-text">An upcoming online shop for Jibaba Solutions. Multi-platform web-based application to be built in Bootstrap, PHP, and MySQLi.</p>
+          </div>
+          <div class="card-footer bg-white d-flex flex-wrap gap-2 border-0">
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="MyJibaba - Project Vision"
+               data-description="MyJibaba is a future-ready e-commerce platform tailored for Jibaba Solutions. It aims to provide a seamless online shopping experience with scalable architecture."
+               data-image="assets/img/cover_gradient.png">
+              Read Case Study
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="MyJibaba - Tech Stack"
+               data-description="Built using PHP, Bootstrap 5, and MySQLi, MyJibaba is structured for responsive design, fast loading, and future integration with mobile apps and payment gateways."
+               data-image="assets/img/cover_gradient.png">
+              Tech Stack
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-success rounded-pill"
+               data-bs-toggle="modal"
+               data-bs-target="#projectModal"
+               data-title="MyJibaba - Features Preview"
+               data-description="Upcoming features include inventory management, customer profiles, product reviews, and a vendor dashboard. Focused on usability and performance."
+               data-image="assets/img/cover_gradient.png">
+              Preview Features
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
 </section>
+
 
 <!-- Contact section -->
 <section id="contact" class="py-5 text-center bg-white position-relative">
@@ -386,6 +445,23 @@
   </div>
 </div>
 
+<!-- Dynamic Project Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="projectImage" src="" alt="Project Image" class="img-fluid mb-3">
+        <p id="projectDescription"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
@@ -396,5 +472,23 @@
 <script src="https://kit.fontawesome.com/642a2d270c.js" crossorigin="anonymous"></script>
 <!-- Windedgesoft.js -->
 <script src="assets/dist/js/windedgesoft.js"></script>
+<script>
+  const projectModal = document.getElementById('projectModal');
+  projectModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget;
+    const title = button.getAttribute('data-title');
+    const description = button.getAttribute('data-description');
+    const image = button.getAttribute('data-image');
+
+    const modalTitle = projectModal.querySelector('.modal-title');
+    const modalDescription = projectModal.querySelector('#projectDescription');
+    const modalImage = projectModal.querySelector('#projectImage');
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalImage.src = image;
+    modalImage.alt = `${title} Image`;
+  });
+</script>
 </body>
 </html>
