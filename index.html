@@ -15,10 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="app/assets/plugins/fontawesome/css/all.min.css">
 
-  <!-- Timeline -->
-  <link rel="stylesheet" href="plugins/how-we-work-timeline/css/style.css">
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
   <!-- Custom Theme -->
   <link rel="stylesheet" href="assets/dist/css/windedgesoft.css">
@@ -50,7 +51,7 @@
             Peek
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="wBlog/">wBlog</a></li>
+            <li><a class="dropdown-item" href="wblog/">wBlog</a></li>
             <li><a class="dropdown-item" href="#">Events</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">a Game?</a></li>
@@ -404,39 +405,37 @@
 
     <!-- Bottom Row -->
     <div class="text-center small text-white-50">
-      &copy; 2025 Windedgesoft. All rights reserved.
-    </div>
-  </div>
+     &copy; 2025 <strong>Windedgesoft</strong>. All rights reserved.
+   </div>
+ </div>
 </footer>
 <!-- /.footer -->
 
 <!-- Message Modal -->
 <div class="modal fade" id="messageModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-primary-subtle">
         <h1 class="modal-title fs-5" id="messageModalLabel">Message Us</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="messageName" class="form-label">Name</label>
-            <input type="email" class="form-control" id="messageName" placeholder="e.g., John Doe">
-          </div>
-          <div class="mb-3">
-            <label for="messageEmailAddress" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="messageEmailAddress" placeholder="name@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="messageContent" class="form-label">Message</label>
-            <textarea class="form-control" id="messageContent" rows="3"></textarea>
-          </div>
-        </form>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="e.g., John Doe">
+          <label for="floatingInput">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email Address</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" id="floatingTextarea" placeholder="Message" style="height: 100px"></textarea>
+          <label for="floatingTextarea">Message</label>
+        </div>
       </div>
       <div class="modal-footer d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Send</button>
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary rounded-pill">Send Message</button>
       </div>
     </div>
   </div>
@@ -492,20 +491,20 @@
 
     const variations = [
       {
+        headline: "Your Idea; Our Code",
+        subheading: "We transform ideas into powerful software using cutting-edge technology.",
+      },
+      {
         headline: "No More Dev Headaches",
         subheading: "From concept to launch, we handle the complexities so you can focus on your business.",
       },
       {
-        headline: "Modernize Your Stack",
+        headline: "Modernize Your Business",
         subheading: "We specialize in software modernization and custom development to boost your efficiency.",
       },
       {
         headline: "Build to Scale",
         subheading: "Custom software solutions designed to grow with your needs.",
-      },
-      {
-        headline: "Your Idea. Our Code",
-        subheading: "We transform ideas into powerful software using cutting-edge technology.",
       },
       {
         headline: "Smarter Software with AI",
@@ -540,5 +539,14 @@
   setInterval(updateTypewriter, 15000);
 });
 </script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
 </body>
 </html>

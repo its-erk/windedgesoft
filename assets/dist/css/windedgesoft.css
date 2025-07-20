@@ -1,7 +1,11 @@
-/*  Navbar Scroll  */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar when scrolled */
 .navbar.scrolled {
-  background-color: #fff !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -11,72 +15,67 @@
   color: #000 !important;
 }
 
-/*  Hero Section  */
-.hero,
-.hero-short {
+.hero {
+  background-image: url('../../../assets/img/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.hero {
-  background-image: url('../../../assets/img/hero-bg.jpg');
-  height: 100vh;
-}
-
-.hero::before,
-.hero-short::before {
+.hero::before {
   content: "";
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+/* Ensure text appears above the overlay */
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-short {
   background-image: url('../../../assets/img/2175196.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
-
 .hero-short::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
-
-.hero-content,
 .hero-short .container {
   position: relative;
   z-index: 2;
-  color: #fff;
-  text-align: center;
 }
 
-.hero h1,
-.hero p,
-.hero .btn {
-  z-index: 2;
-  position: relative;
-}
-
-/*  Text Fade Effects  */
-#headline,
-#subheading {
-  opacity: 1;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-/*  Service Cards  */
+/* Fancy card transition */
 .service-card {
   border: none;
-  background: #fff;
-  overflow: hidden;
-  position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -84,7 +83,7 @@
 .service-card:hover {
   transform: translateY(-10px) scale(1.02) rotateX(3deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(145deg, #fff, #f4f4f4);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
 }
 
 .service-card::before {
@@ -94,7 +93,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 123, 255, 0.05), transparent 70%);
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05), transparent 70%);
   transform: rotate(25deg);
   transition: opacity 0.5s ease;
   opacity: 0;
@@ -114,7 +113,6 @@
   color: #0d6efd;
 }
 
-/*  Timeline  */
 .timeline {
   position: relative;
   padding: 2rem 0;
@@ -134,30 +132,31 @@
 .timeline-item {
   position: relative;
   margin-bottom: 4rem;
+  align-items: center;
 }
 
 .timeline-icon {
   width: 50px;
   height: 50px;
   line-height: 50px;
+  display: inline-block;
   background: #0d6efd;
-  color: #fff;
+  color: white;
   border-radius: 50%;
   font-size: 1.25rem;
+  z-index: 2;
   box-shadow: 0 0 0 4px #e7f1ff;
   position: relative;
-  z-index: 2;
 }
 
-/*  Testimonials  */
 .testimonial-card {
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
   border: none;
   border-radius: 1rem;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
   position: relative;
 }
 
@@ -197,14 +196,13 @@
   box-shadow: 0 0 0 4px #f0f8ff;
 }
 
-/*  Project Cards  */
 .project-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   border: none;
   border-radius: 1rem;
-  background: #fff;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
+  background: #fff;
 }
 
 .project-card:hover {
@@ -213,8 +211,8 @@
 }
 
 .project-card img {
-  height: 180px;
   object-fit: cover;
+  height: 180px;
   transition: transform 0.5s ease;
 }
 
@@ -223,9 +221,9 @@
 }
 
 .project-card .card-body {
-  padding: 1.25rem;
   position: relative;
   z-index: 2;
+  padding: 1.25rem;
 }
 
 .project-card .card-title {
@@ -242,6 +240,7 @@
   padding: 1rem 1.25rem;
   background: transparent;
   border-top: none;
+  z-index: 2;
 }
 
 .project-card a.btn-outline-primary {
@@ -254,13 +253,11 @@
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
 
-/*  Team Cards  */
 .team-card img {
   height: 300px;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-
 .team-card .card-body {
   padding-top: 1rem;
 }
