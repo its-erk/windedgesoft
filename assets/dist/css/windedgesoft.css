@@ -69,49 +69,52 @@ html {
   z-index: 2;
 }
 
-/* Fancy card transition */
+/* Base card style */
 .service-card {
+  background: white;
+  color: #333;
   border: none;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  background: #fff;
-  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
   overflow: hidden;
-  perspective: 1000px;
-  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
 }
 
+/* Common hover style */
 .service-card:hover {
-  transform: translateY(-10px) scale(1.02) rotateX(3deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  color: white;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
 }
 
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05), transparent 70%);
-  transform: rotate(25deg);
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  pointer-events: none;
+/* Gradient overlays per brand color */
+.card-hover-blue:hover {
+  background: linear-gradient(135deg, #00BDF2, #009DD1);
 }
 
-.service-card:hover::before {
-  opacity: 1;
+.card-hover-pink:hover {
+  background: linear-gradient(135deg, #EC1F7A, #C71568);
 }
 
-.service-card i {
-  transition: transform 0.3s ease, color 0.3s ease;
+.card-hover-green:hover {
+  background: linear-gradient(135deg, #8BC53F, #6FAE2D);
 }
 
+.card-hover-orange:hover {
+  background: linear-gradient(135deg, #FBB040, #D68A00);
+}
+
+.card-hover-teal:hover {
+  background: linear-gradient(135deg, #00708A, #005F77);
+}
+
+/* Ensure icons also turn white */
 .service-card:hover i {
-  transform: scale(1.2);
-  color: #0d6efd;
+  color: white !important;
+  transform: scale(1.1);
 }
+
 
 .timeline {
   position: relative;
