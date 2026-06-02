@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headlines | wBlog</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/favicon_io/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap 5.3.7 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="../app/assets/plugins/fontawesome/css/all.min.css">
+
+  <!-- Custom Theme -->
+  <link rel="stylesheet" href="../assets/dist/css/windedgesoft.css">
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <!-- <img src="assets/img/logo_icon.png" alt="Logo" width="30" height="30" class="me-2"> -->
+      <span class="fw-semibold">wBlog</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">News</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="wBlog/category/web-dev.html">Web Dev Insights</a></li>
+            <li><a class="dropdown-item" href="wBlog/category/case-studies.html">Case Studies</a></li>
+            <li><a class="dropdown-item" href="wBlog/category/events.html">Events & Community</a></li>
+            <li><a class="dropdown-item" href="wBlog/category/ai-labs.html">Labs & Innovation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="wBlog/category/a-game.html">a Game?</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">:)</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="headline-hero py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-3 border-start border-4 ps-3 border-primary">Today’s Tech Insight</h1>
+        <p class="lead text-white-50">Latest from the bleeding edge — development trends, system builds, and all things Windedgesoft.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <span class="badge bg-primary text-uppercase">Featured</span>
+        <p class="mt-2 text-white-50 small">Published: July 2, 2025</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news-section py-5 bg-light">
+  <div class="container">
+    <div class="row g-5">
+      <!-- LEFT COLUMN: Search & Tags -->
+      <aside class="col-lg-3">
+        <!-- Search -->
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Search</h6>
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search posts...">
+              <button class="btn btn-outline-secondary" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tags / Categories -->
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Popular Tags</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" class="badge bg-dark text-white">PHP</a>
+            <a href="#" class="badge bg-secondary text-white">C++</a>
+            <a href="#" class="badge bg-primary">Design</a>
+            <a href="#" class="badge bg-info text-dark">Windedgesoft</a>
+            <a href="#" class="badge bg-warning text-dark">DevOps</a>
+            <a href="#" class="badge bg-success">Startups</a>
+          </div>
+        </div>
+
+        <!-- Optional: Archives -->
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Archives</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-dark text-decoration-none">July 2025</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">June 2025</a></li>
+            <li><a href="#" class="text-dark text-decoration-none">May 2025</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT COLUMN -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4 border-bottom pb-2">Latest Posts</h2>
+
+        <div class="row g-4">
+          <!-- Article Card -->
+          <div class="col-12">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="../assets/img/cover.png" class="card-img-top img-fluid" alt="Cover image for 'The Future of PHP in 2025'">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="#" class="text-dark text-decoration-none">The Future of PHP in 2025</a>
+                </h5>
+                <p class="card-text text-muted small mb-1">July 2, 2025 • Development • 4 min read</p>
+                <p class="card-text">Why PHP still holds a strong case for full-stack systems and how we’re leveraging it in AviziTrack.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-sm h-100" aria-hidden="true">
+            <img src="../assets/img/cover_gradient.png" class="card-img-top img-fluid" alt="Cover image for 'The Future of PHP in 2025'">
+            <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+            </div>
+          </div>
+          
+          <!-- Repeat more articles as needed -->
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (Optional) -->
+      <aside class="col-lg-3">
+        <!-- Popular Posts -->
+        <div class="mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Popular Posts</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Building Admin Panels in Pure PHP</a></li>
+            <li class="mb-2"><a href="#" class="text-dark text-decoration-none">Top UI Frameworks in 2025</a></li>
+            <li class="mb-2"><a href="#" class="text-dark text-decoration-none">When to Ditch Laravel</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter or CTA -->
+        <div class="p-3 bg-white border shadow-sm">
+          <h6 class="fw-bold mb-2">Subscribe</h6>
+          <p class="small">Get weekly tech stories from Windedgesoft.</p>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Your email">
+            <button class="btn btn-dark btn-sm w-100">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-black text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- About wBlog -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-uppercase mb-3">About wBlog</h5>
+        <p class="small text-white-50">
+          wBlog is where Windedgesoft shares stories from the trenches: development insights, product engineering, and startup hacks. From raw code to polished interfaces, we document what works.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-uppercase mb-3">Explore</h5>
+        <ul class="list-unstyled small text-white-50">
+          <li><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+          <li><a href="../about.html" class="text-white-50 text-decoration-none">About</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Tags</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Categories</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Submit an Article</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe & Social -->
+      <div class="col-md-4">
+        <h5 class="fw-bold text-uppercase mb-3">Stay Updated</h5>
+        <p class="small text-white-50">Get dev insights and stories straight to your inbox.</p>
+        <form class="mb-3">
+          <div class="input-group">
+            <input type="email" class="form-control form-control-sm bg-transparent border-secondary text-light" placeholder="Enter email">
+            <button class="btn btn-outline-light btn-sm" type="submit">Subscribe</button>
+          </div>
+        </form>
+        <div>
+          <a href="https://linkedin.com" class="text-white-50 me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://github.com/its-erk" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://twitter.com/windedgesoft" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-secondary my-4">
+
+    <!-- Copyright -->
+    <div class="text-center small text-white-50">
+      &copy; 2025 <strong>Windedgesoft</strong>. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/642a2d270c.js" crossorigin="anonymous"></script>
+<!-- Windedgesoft.js -->
+<script src="assets/dist/js/windedgesoft.js"></script>
+</body>
+</html>
