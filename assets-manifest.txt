@@ -1,0 +1,42 @@
+# Files packed from /home/claude/site on 20261116-115412
+# 39 files, 1.5 MB
+
+     11970  about.html
+    232066  assets/bootstrap/css/bootstrap.min.css
+     60498  assets/bootstrap/js/bootstrap.min.js
+     13285  assets/css/style.css
+     35178  assets/img/2148300908.webp
+     26796  assets/img/favicon_io/android-chrome-192x192.png
+    159922  assets/img/favicon_io/android-chrome-512x512.png
+     25263  assets/img/favicon_io/apple-touch-icon.png
+       734  assets/img/favicon_io/favicon-16x16.png
+      1884  assets/img/favicon_io/favicon-32x32.png
+     15406  assets/img/favicon_io/favicon.ico
+       286  assets/img/favicon_io/site.webmanifest
+     63146  assets/img/logo.png
+     45679  assets/img/logo_icon.png
+     59414  assets/img/our_projects/avizi_investment_home.webp
+     45916  assets/img/our_projects/avizitrack_admin_features.webp
+     52836  assets/img/our_projects/avizitrack_reports.webp
+     46144  assets/img/our_projects/elect_shop.webp
+     34080  assets/img/our_projects/myjibaba.webp
+     35386  assets/img/our_projects/myjibaba2.webp
+     58442  assets/img/our_projects/noi_cover.webp
+     27280  assets/img/team/1.webp
+     48004  assets/img/team/3.webp
+     88166  assets/img/team/erk.webp
+     14676  assets/img/testimonials/33861.webp
+     13038  assets/img/testimonials/african-american-man-wearing-white-shirt-posing.webp
+     31952  assets/img/testimonials/joyful-african-american-female-with-happy-expression-looks-positively-aside.webp
+      4467  assets/js/contact.js
+      1169  assets/js/windedgesoft.js
+     75736  assets/vendor/fontawesome/css/all.min.css
+    110088  assets/vendor/fontawesome/webfonts/fa-brands-400.woff2
+     18924  assets/vendor/fontawesome/webfonts/fa-regular-400.woff2
+    114740  assets/vendor/fontawesome/webfonts/fa-solid-900.woff2
+      4032  assets/vendor/fontawesome/webfonts/fa-v4compatibility.woff2
+     13078  contact.html
+     23213  index.html
+       117  robots.txt
+      8137  send_message.php
+       604  sitemap.xml

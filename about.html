@@ -3,19 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | Windedgesoft</title>
+  <title>About Windedgesoft | Web &amp; Software Development Team in Kenya</title>
+  <meta name="description" content="Meet Windedgesoft, a Kenyan software company building modern websites, business systems and digital solutions designed for growth and efficiency.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://windedgesoft.com/about.html">
+  <meta name="theme-color" content="#061018">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Windedgesoft">
+  <meta property="og:title" content="About Windedgesoft | Web &amp; Software Development Team in Kenya">
+  <meta property="og:description" content="Meet Windedgesoft, a Kenyan software company building modern websites, business systems and digital solutions designed for growth and efficiency.">
+  <meta property="og:url" content="https://windedgesoft.com/about.html">
+  <meta property="og:image" content="https://windedgesoft.com/assets/img/logo.png">
+  <meta property="og:image:alt" content="Windedgesoft logo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@windedgesoft">
+  <meta name="twitter:title" content="About Windedgesoft | Web &amp; Software Development Team in Kenya">
+  <meta name="twitter:description" content="Meet Windedgesoft, a Kenyan software company building modern websites, business systems and digital solutions designed for growth and efficiency.">
+  <meta name="twitter:image" content="https://windedgesoft.com/assets/img/logo.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+
 
   <!-- Favicon -->
   <link rel="icon" href="assets/img/favicon_io/favicon.ico" type="image/x-icon">
   <!-- Bootstrap -->
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
   <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <!-- Custom Theme -->
+  <link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -24,7 +49,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" id="mainNav">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/img/logo_icon.png" alt="Logo" width="25" height="25" class="me-2">
+      <img src="assets/img/logo_icon.png" alt="Windedgesoft logo" width="25" height="25" class="me-2">
       <span class="fw-semibold">Windedgesoft</span>
     </a>
     
@@ -52,7 +77,7 @@
           </ul>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html#contact">Contact Us</a>
+          <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -150,7 +175,7 @@
     <div class="row g-4">
       <div class="col-md-4">
         <div class="team-card h-100" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/team/1.webp" alt="Agnes N.">
+          <img loading="lazy" src="assets/img/team/1.webp" alt="Agnes N.">
           <div class="team-body">
             <h5>Linet S.</h5>
             <p>Project Manager</p>
@@ -165,7 +190,7 @@
 
       <div class="col-md-4">
         <div class="team-card h-100" data-aos="fade-up" data-aos-delay="400">
-          <img src="assets/img/team/erk.webp" alt="John K.">
+          <img loading="lazy" src="assets/img/team/erk.webp" alt="John K.">
           <div class="team-body">
             <h5>Edwin R.</h5>
             <p>Developer</p>
@@ -179,7 +204,7 @@
 
       <div class="col-md-4">
         <div class="team-card h-100" data-aos="fade-up" data-aos-delay="500">
-          <img src="assets/img/team/3.webp" alt="Shay S.">
+          <img loading="lazy" src="assets/img/team/3.webp" alt="Shay S.">
           <div class="team-body">
             <h5>Rita K.</h5>
             <p>Manager</p>
@@ -216,7 +241,7 @@
           <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
           <li><a href="index.html#projects" class="text-white-50 text-decoration-none">Projects</a></li>
           <li><a href="index.html#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
-          <li><a href="index.html#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+          <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
         </ul>
       </div>
 
@@ -224,12 +249,12 @@
       <div class="col-md-4">
         <h6 class="fw-semibold text-uppercase mb-3">Connect</h6>
         <ul class="list-unstyled text-white-50 small">
-          <li><i class="fas fa-envelope me-2"></i> windedgesoft@gmail.com</li>
-          <li><i class="fas fa-phone me-2"></i> +254 797 656305</li>
+          <li><i class="fas fa-envelope me-2"></i> <a href="mailto:windedgesoft@gmail.com" class="text-white-50 text-decoration-none">windedgesoft@gmail.com</a></li>
+          <li><i class="fas fa-phone me-2"></i> <a href="tel:+254797656305" class="text-white-50 text-decoration-none">+254 797 656 305</a></li>
         </ul>
         <div class="mt-3">
-          <a href="https://github.com/its-erk" target="_blank" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
-          <a href="https://twitter.com/windedgesoft" target="_blank" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
+          <a href="https://github.com/its-erk" target="_blank" rel="noopener" class="text-white-50 me-3"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://twitter.com/windedgesoft" target="_blank" rel="noopener" class="text-white-50"><i class="fab fa-x-twitter fa-lg"></i></a>
         </div>
       </div>
 
@@ -252,7 +277,7 @@
 <!-- Windedgesoft.js -->
 <script src="assets/js/windedgesoft.js"></script>
 <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
 <script>
   AOS.init({
     duration: 700,

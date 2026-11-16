@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /send_message.php
+
+Sitemap: https://its-erk.github.io/windedgesoft/sitemap.xml
