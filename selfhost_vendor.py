@@ -10,7 +10,7 @@ What it does (needs an internet connection, run it once):
   4. Removes the unused "Source Sans Pro" font link (style.css only uses Sora).
 
 Everything is downloaded first; pages are only edited if every download worked.
-Safe to run again. Your site is a git repo, so `git diff` shows exactly what changed.
+Safe to run again. If your site is a git repo, so `git diff` shows exactly what changed.
 
 Usage:
     python3 selfhost_vendor.py
