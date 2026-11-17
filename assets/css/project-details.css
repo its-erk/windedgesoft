@@ -1,0 +1,464 @@
+
+/* =====================================
+   WINDEDGESOFT PROJECT CASE STUDIES
+===================================== */
+
+.case-header {
+    position: relative;
+    z-index: 5;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+    background: rgba(3, 8, 13, 0.88);
+}
+
+.case-header .container,
+.case-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.case-back {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.case-back i {
+    margin-right: 8px;
+}
+
+.case-back:hover {
+    color: var(--teal);
+}
+
+.case-brand img {
+    width: 155px;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+.case-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 95px 0 110px;
+    background:
+        radial-gradient(circle at 85% 35%,
+        rgba(22, 140, 255, 0.16), transparent 35%),
+        radial-gradient(circle at 10% 85%,
+        rgba(25, 211, 197, 0.1), transparent 35%);
+}
+
+.case-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 70px;
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.case-breadcrumb a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.case-breadcrumb a:hover {
+    color: var(--teal);
+}
+
+.case-eyebrow,
+.case-section-heading > span {
+    color: var(--teal);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.case-hero h1 {
+    max-width: 750px;
+    margin: 20px 0;
+    color: var(--text);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.075em;
+}
+
+.case-hero #projectSummary {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.case-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-top: 45px;
+}
+
+.case-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.case-meta span {
+    color: var(--muted);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+}
+
+.case-meta strong {
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.case-hero-art {
+    position: relative;
+    display: flex;
+    min-height: 380px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid var(--border-teal);
+    border-radius: 30px;
+    background: linear-gradient(
+        145deg,
+        rgba(25, 211, 197, 0.12),
+        rgba(22, 140, 255, 0.09),
+        var(--bg-dark)
+    );
+}
+
+.case-art-glow {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: var(--teal);
+    filter: blur(110px);
+    opacity: 0.2;
+}
+
+.case-art-number {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: rgba(255,255,255,0.08);
+    font-size: 9rem;
+    font-weight: 800;
+}
+
+.case-hero-art > i {
+    position: relative;
+    color: var(--teal);
+    font-size: 5rem;
+    filter: drop-shadow(0 0 25px rgba(25,211,197,0.35));
+}
+
+.case-hero-art > span:last-child {
+    position: absolute;
+    bottom: 24px;
+    color: var(--muted);
+    font-size: 0.6rem;
+    letter-spacing: 0.13em;
+}
+
+/* Shared sections */
+
+.case-preview-section,
+.case-overview-section,
+.case-tech-section {
+    padding: 100px 0;
+}
+
+.case-preview-section {
+    background: rgba(255,255,255,0.018);
+    border-block: 1px solid var(--border);
+}
+
+.case-section-heading {
+    margin-bottom: 35px;
+}
+
+.case-section-heading h2 {
+    margin: 15px 0;
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+}
+
+.case-section-heading p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* Gallery */
+
+.case-main-image {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--bg-soft);
+}
+
+.case-main-image img {
+    display: block;
+    width: 100%;
+    max-height: 680px;
+    min-height: 250px;
+    object-fit: contain;
+    background: var(--bg-dark);
+}
+
+.gallery-control {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgba(3,8,13,0.85);
+    color: #fff;
+    transform: translateY(-50%);
+    transition: var(--transition);
+}
+
+.gallery-control:hover {
+    background: var(--teal);
+    color: var(--bg-dark);
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+.gallery-counter {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: rgba(3,8,13,0.85);
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.gallery-thumbnail {
+    flex: 0 0 150px;
+    height: 95px;
+    overflow: hidden;
+    padding: 0;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-dark);
+    opacity: 0.55;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-thumbnail.active,
+.gallery-thumbnail:hover {
+    border-color: var(--teal);
+    opacity: 1;
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overview */
+
+.case-overview-text {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.case-features {
+    margin-top: 45px;
+}
+
+.case-features h3 {
+    margin-bottom: 25px;
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.case-features ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 0;
+    list-style: none;
+}
+
+.case-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.case-features li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--teal);
+}
+
+/* Technology */
+
+.case-tech-section {
+    border-block: 1px solid var(--border);
+    background: rgba(255,255,255,0.018);
+}
+
+.case-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.case-tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 23px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-card);
+    color: var(--text);
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.case-tech-item i {
+    color: var(--teal);
+}
+
+.case-tech-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-teal);
+}
+
+/* Final CTA */
+
+.case-next-section {
+    padding: 100px 20px;
+    text-align: center;
+    background:
+        radial-gradient(circle at center,
+        rgba(25,211,197,0.1), transparent 55%);
+}
+
+.case-next-section > .container > span {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.case-next-section h2 {
+    margin: 20px auto;
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 3.7rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+}
+
+.case-next-section p {
+    margin-bottom: 30px;
+    color: var(--muted);
+}
+
+.case-footer {
+    padding: 25px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.case-footer a {
+    text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .case-hero {
+        padding: 65px 0 75px;
+    }
+
+    .case-breadcrumb {
+        margin-bottom: 45px;
+    }
+
+    .case-hero-art {
+        min-height: 260px;
+    }
+
+    .case-meta {
+        gap: 25px;
+    }
+
+    .case-preview-section,
+    .case-overview-section,
+    .case-tech-section {
+        padding: 70px 0;
+    }
+
+    .case-features ul {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-thumbnail {
+        flex-basis: 110px;
+        height: 75px;
+    }
+
+    .case-brand img {
+        width: 120px;
+    }
+
+    .case-back {
+        font-size: 0.7rem;
+    }
+
+    .case-footer .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-control,
+    .gallery-thumbnail,
+    .case-tech-item {
+        transition: none;
+    }
+}

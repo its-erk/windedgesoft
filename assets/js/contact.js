@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = document.getElementById("cf-icon");
     const label = document.getElementById("cf-label");
 
-    // Timestamp used by the server to catch bots that submit instantly
-    document.getElementById("cf-started").value = Date.now();
-
+    const SUCCESS_HTML = "Thanks! Your message has been sent. We will get back to you soon.";
     const FALLBACK_HTML =
         'Sorry, we couldn\'t send your message. Please email ' +
         '<a href="mailto:windedgesoft@gmail.com">windedgesoft@gmail.com</a> ' +
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         label.textContent = busy ? "Sending..." : "Send Message";
     }
 
-    // Quick client-side checks (the server validates again)
     function validate() {
         const errors = {};
         const name = form.elements.name.value.trim();
@@ -73,12 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // Spam trap: a real visitor never fills this in. Pretend it worked.
+        if (form.elements.website.value || (form.elements.botcheck && form.elements.botcheck.checked)) {
+            form.reset();
+            showStatus("success", SUCCESS_HTML);
+            return;
+        }
+
+        // Setup check: the form service key hasn't been added yet
+        const key = form.elements.access_key ? form.elements.access_key.value : "";
+        if (!key || key.indexOf("YOUR_") === 0) {
+            console.warn("contact.html: set your Web3Forms access key in the hidden access_key field.");
+            showStatus("danger", FALLBACK_HTML);
+            return;
+        }
+
         setBusy(true);
         try {
             const response = await fetch(form.action, {
                 method: "POST",
                 body: new FormData(form),
-                headers: { Accept: "application/json", "X-Requested-With": "XMLHttpRequest" },
+                headers: { Accept: "application/json" },
             });
 
             let data = null;
@@ -88,14 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 /* non-JSON response */
             }
 
-            if (data && data.ok) {
+            // Web3Forms replies { success: true }, Formspree replies { ok: true }
+            if (response.ok && data && (data.success === true || data.ok === true)) {
                 form.reset();
-                document.getElementById("cf-started").value = Date.now();
-                showStatus("success", data.message || "Thanks! Your message has been sent.");
-            } else if (data && data.errors && Object.keys(data.errors).length) {
-                setFieldErrors(data.errors);
+                showStatus("success", SUCCESS_HTML);
             } else {
-                showStatus("danger", (data && data.message) || FALLBACK_HTML);
+                showStatus("danger", FALLBACK_HTML);
             }
         } catch (err) {
             showStatus("danger", FALLBACK_HTML);
@@ -103,12 +113,4 @@ document.addEventListener("DOMContentLoaded", () => {
             setBusy(false);
         }
     });
-
-    // Result messages when JavaScript was off and the page was reloaded by the server
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("sent") === "1") {
-        showStatus("success", "Thanks! Your message has been sent.");
-    } else if (params.get("error")) {
-        showStatus("danger", FALLBACK_HTML);
-    }
 });

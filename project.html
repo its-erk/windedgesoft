@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project | Windedgesoft</title>
+    <meta name="description" content="Explore software projects designed and developed by Windedgesoft.">
+
+    <link rel="icon" href="assets/img/favicon_io/favicon.ico">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/project-details.css">
+</head>
+
+<body>
+
+<header class="case-header">
+    <div class="container">
+        <a href="./#projects" class="case-back">
+            <i class="fas fa-arrow-left"></i>
+            Back to Projects
+        </a>
+
+        <a href="./" class="case-brand">
+            <img src="assets/img/logo.png" alt="Windedgesoft">
+        </a>
+    </div>
+</header>
+
+<main id="projectDetails">
+
+    <section class="case-hero">
+        <div class="container">
+
+            <div class="case-breadcrumb">
+                <a href="./">Home</a>
+                <span>/</span>
+                <a href="./#projects">Projects</a>
+                <span>/</span>
+                <span id="projectCategory">Project</span>
+            </div>
+
+            <div class="row align-items-center gy-5">
+
+                <div class="col-lg-7">
+                    <span class="case-eyebrow" id="projectNumber">
+                        SELECTED PROJECT
+                    </span>
+
+                    <h1 id="projectTitle">
+                        Project Title
+                    </h1>
+
+                    <p id="projectSummary"></p>
+
+                    <div class="case-meta">
+                        <div>
+                            <span>PROJECT TYPE</span>
+                            <strong id="projectType">Website</strong>
+                        </div>
+
+                        <div>
+                            <span>PROJECT STATUS</span>
+                            <strong id="projectStatus">Delivered</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="case-hero-art">
+                        <div class="case-art-glow"></div>
+                        <span class="case-art-number" id="artNumber">01</span>
+                        <i class="fas fa-code"></i>
+                        <span>WIND EDGESOFT / DIGITAL SOLUTIONS</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="case-preview-section">
+        <div class="container">
+
+            <div class="case-section-heading">
+                <span>01 / VISUAL EXPERIENCE</span>
+                <h2>Inside the project.</h2>
+                <p>
+                    Explore the interface and different areas
+                    of this project.
+                </p>
+            </div>
+
+            <div class="case-gallery">
+
+                <div class="case-main-image">
+                    <img id="galleryImage"
+                         src=""
+                         alt="Project preview">
+
+                    <button class="gallery-control gallery-prev"
+                            id="galleryPrev"
+                            aria-label="Previous screenshot">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <button class="gallery-control gallery-next"
+                            id="galleryNext"
+                            aria-label="Next screenshot">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <span class="gallery-counter" id="galleryCounter">
+                        01 / 01
+                    </span>
+                </div>
+
+                <div class="gallery-thumbnails"
+                     id="galleryThumbnails"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="case-overview-section">
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4">
+                    <div class="case-section-heading">
+                        <span>02 / THE OVERVIEW</span>
+                        <h2>Built with purpose.</h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <p class="case-overview-text"
+                       id="projectDescription"></p>
+
+                    <div class="case-features">
+                        <h3>Project highlights</h3>
+                        <ul id="projectFeatures"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="case-tech-section">
+        <div class="container">
+
+            <div class="case-section-heading">
+                <span>03 / THE TECHNOLOGY</span>
+                <h2>Tools behind the build.</h2>
+                <p>
+                    Technologies and tools associated with
+                    this project.
+                </p>
+            </div>
+
+            <div class="case-tech-list" id="projectTech"></div>
+
+        </div>
+    </section>
+
+    <section class="case-next-section">
+        <div class="container">
+            <span>HAVE AN IDEA?</span>
+            <h2>Let's build something remarkable.</h2>
+            <p>
+                Have a project in mind? We'd love to hear about it.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary rounded-pill">
+                Start a Conversation
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="case-footer">
+    <div class="container">
+        <span>© <span id="year"></span> Windedgesoft.</span>
+        <a href="./#projects">Explore more projects</a>
+    </div>
+</footer>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/project-details.js"></script>
+
+</body>
+</html>

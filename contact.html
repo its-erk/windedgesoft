@@ -6,7 +6,7 @@
   <title>Contact Windedgesoft | Request a Quote for Your Web or Software Project</title>
   <meta name="description" content="Tell us about your project. Contact Windedgesoft by form, email, phone or WhatsApp about your website, app or business system.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://windedgesoft.com/contact.html">
+  <link rel="canonical" href="https://its-erk.github.io/windedgesoft/contact.html">
   <meta name="theme-color" content="#061018">
 
   <!-- Open Graph / Twitter -->
@@ -14,14 +14,14 @@
   <meta property="og:site_name" content="Windedgesoft">
   <meta property="og:title" content="Contact Windedgesoft | Request a Quote for Your Web or Software Project">
   <meta property="og:description" content="Tell us about your project. Contact Windedgesoft by form, email, phone or WhatsApp about your website, app or business system.">
-  <meta property="og:url" content="https://windedgesoft.com/contact.html">
-  <meta property="og:image" content="https://windedgesoft.com/assets/img/logo.png">
+  <meta property="og:url" content="https://its-erk.github.io/windedgesoft/contact.html">
+  <meta property="og:image" content="https://its-erk.github.io/windedgesoft/assets/img/logo.png">
   <meta property="og:image:alt" content="Windedgesoft logo">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@windedgesoft">
   <meta name="twitter:title" content="Contact Windedgesoft | Request a Quote for Your Web or Software Project">
   <meta name="twitter:description" content="Tell us about your project. Contact Windedgesoft by form, email, phone or WhatsApp about your website, app or business system.">
-  <meta name="twitter:image" content="https://windedgesoft.com/assets/img/logo.png">
+  <meta name="twitter:image" content="https://its-erk.github.io/windedgesoft/assets/img/logo.png">
 
   <!-- Favicons -->
   <link rel="icon" href="assets/img/favicon_io/favicon.ico" type="image/x-icon">
@@ -36,11 +36,11 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Windedgesoft",
-    "url": "https://windedgesoft.com/contact.html",
+    "url": "https://its-erk.github.io/windedgesoft/contact.html",
     "mainEntity": {
       "@type": "Organization",
       "name": "Windedgesoft",
-      "url": "https://windedgesoft.com/",
+      "url": "https://its-erk.github.io/windedgesoft/",
       "email": "windedgesoft@gmail.com",
       "telephone": "+254797656305"
     }
@@ -63,35 +63,54 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" id="mainNav">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/img/logo_icon.png" alt="Windedgesoft logo" width="25" height="25" class="me-2">
+
+    <a class="navbar-brand d-flex align-items-center" href="./">
+      <img src="assets/img/logo_icon.png" alt="Windedgesoft logo"
+           width="25" height="25" class="me-2">
       <span class="fw-semibold">Windedgesoft</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="./" data-nav="home">Home</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="./#services" data-nav="services">Services</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+          <a class="nav-link" href="./#projects" data-nav="projects">Projects</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" data-nav="about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" data-nav="contact">Contact</a>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero-short contact-hero py-5 text-center text-light">
+<section class="hero-short contact-hero text-center text-light">
   <div class="container">
-    <span class="section-kicker" data-aos="fade-up">Contact Us</span>
+    <span class="section-kicker mb-2" data-aos="fade-up">Contact Us</span>
     <h1 class="display-5 fw-bold mt-3" data-aos="fade-up" data-aos-delay="100">
       Let’s Talk About Your Project
     </h1>
@@ -102,15 +121,15 @@
 </section>
 
 <!-- Contact -->
-<section class="py-5" id="contact-form-section">
+<section class="" id="contact-form-section">
   <div class="container">
     <div class="row g-4 align-items-start">
 
       <!-- Form -->
       <div class="col-lg-7">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="300">
           <div class="card-body text-start">
-            <h2 class="h4 fw-bold mb-4">Send us a message</h2>
+            <h2 class="fw-bold mb-3">Send us a message</h2>
 
             <div id="formStatus" role="status" aria-live="polite">
               <noscript>
@@ -118,7 +137,7 @@
               </noscript>
             </div>
 
-            <form id="contactForm" action="send_message.php" method="post" novalidate>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate>
 
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="cf-name" name="name" placeholder="Your name" maxlength="100" autocomplete="name" required>
@@ -144,8 +163,8 @@
               </div>
 
               <div class="form-floating mb-3">
-                <select class="form-select form-control" id="cf-service" name="service">
-                  <option value="Not sure yet" selected>Not sure yet</option>
+                <select class="form-select" id="cf-service" name="service">
+                  <option class="bg-soft" value="Not sure yet" selected>Not sure yet</option>
                   <option value="Website">Website</option>
                   <option value="Web application">Web application</option>
                   <option value="Business system / ERP">Business system / ERP</option>
@@ -168,13 +187,17 @@
                 <label for="cf-website">Leave this field empty</label>
                 <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
               </div>
-              <input type="hidden" name="started" id="cf-started" value="">
+              <!-- Form service settings (Web3Forms). Replace the access key with yours. -->
+              <input type="hidden" name="access_key" value="12a4c3ba-0612-484e-82a1-d25126ae7470">
+              <input type="hidden" name="subject" value="New enquiry from the Windedgesoft website">
+              <input type="hidden" name="from_name" value="Windedgesoft Website">
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
               <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4" id="cf-submit">
                 <span class="spinner-border spinner-border-sm me-2 d-none" id="cf-spinner" aria-hidden="true"></span>
                 <i class="fas fa-paper-plane me-2" id="cf-icon"></i><span id="cf-label">Send Message</span>
               </button>
-              <p class="small text-muted mt-3 mb-0">We only use your details to reply to this enquiry.</p>
+              <p class="small text-muted mt-3 mb-0"><i class="fas fa-info-circle"></i> We only use your details to reply to this enquiry.</p>
             </form>
           </div>
         </div>
@@ -182,9 +205,9 @@
 
       <!-- Direct contact -->
       <div class="col-lg-5">
-        <div class="card shadow-sm mb-4">
+        <div class="card shadow-sm mb-4" data-aos="fade-up" data-aos-delay="350">
           <div class="card-body text-start">
-            <h2 class="h5 fw-bold mb-3">Prefer to reach us directly?</h2>
+            <h2 class="fw-bold mb-3">Prefer to reach us directly?</h2>
             <ul class="list-unstyled mb-0">
               <li class="mb-3">
                 <i class="fas fa-envelope text-primary me-2"></i>
@@ -202,9 +225,9 @@
           </div>
         </div>
 
-        <div class="card shadow-sm">
+        <div class="card shadow-sm" data-aos="fade-up" data-aos-delay="400">
           <div class="card-body text-start">
-            <h2 class="h5 fw-bold mb-3">What happens next?</h2>
+            <h2 class="fw-bold mb-3">What happens next?</h2>
             <ol class="mb-0 ps-3 text-muted">
               <li class="mb-2">We read your message and may ask a few questions.</li>
               <li class="mb-2">We talk through scope, timeline and budget with you.</li>
@@ -234,8 +257,8 @@
         <h6 class="fw-semibold text-uppercase mb-3">Quick Links</h6>
         <ul class="list-unstyled text-white-50 small">
           <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
-          <li><a href="index.html#projects" class="text-white-50 text-decoration-none">Projects</a></li>
-          <li><a href="index.html#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
+          <li><a href="./#projects" class="text-white-50 text-decoration-none">Projects</a></li>
+          <li><a href="./#testimonials" class="text-white-50 text-decoration-none">Testimonials</a></li>
           <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
         </ul>
       </div>

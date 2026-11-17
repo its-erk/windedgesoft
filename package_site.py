@@ -36,9 +36,9 @@ except ImportError:  # image shrinking is optional
 
 DEFAULT_SOURCE = "/var/www/html/windedgesoft"
 
-# The domain written into canonical/OG tags and sitemap.xml in the source files.
-# Use --domain to swap it for your real domain inside the zip.
-PLACEHOLDER_DOMAIN = "https://windedgesoft.com"
+# The URL written into canonical/OG tags and sitemap.xml in the source files.
+# When you move to a custom domain, use --domain to swap it inside the zip.
+PLACEHOLDER_DOMAIN = "https://its-erk.github.io/windedgesoft"
 
 # --- Never upload these ------------------------------------------------------
 EXCLUDE_DIRS = {".git", "__pycache__", "node_modules", ".idea", ".vscode"}
@@ -192,8 +192,6 @@ def transform(rel: str, data: bytes, args):
     if args.domain and suffix in {".html", ".xml", ".txt", ".php"}:
         text = data.decode("utf-8", errors="ignore")
         text = text.replace(PLACEHOLDER_DOMAIN, args.domain.rstrip("/"))
-        host = re.sub(r"^https?://(www\.)?", "", args.domain.rstrip("/"))
-        text = text.replace("no-reply@windedgesoft.com", f"no-reply@{host}")
         data = text.encode("utf-8")
 
     if args.shrink and suffix in IMAGE_SUFFIXES:
@@ -275,8 +273,8 @@ def build(args) -> int:
     print(f"Zip file size              : {human(zip_size)}")
 
     if not args.domain:
-        print(f"\nNote: canonical/OG tags and sitemap.xml still use {PLACEHOLDER_DOMAIN}.\n"
-              "      If your real domain is different, re-run with --domain https://your-domain")
+        print(f"\nNote: canonical/OG tags and sitemap.xml use {PLACEHOLDER_DOMAIN}.\n"
+              "      After moving to a custom domain, re-run with --domain https://your-domain")
 
     if args.dry_run:
         print("\nDry run: nothing written.")

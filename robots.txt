@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /send_message.php
+Disallow: /backup/
 
 Sitemap: https://its-erk.github.io/windedgesoft/sitemap.xml

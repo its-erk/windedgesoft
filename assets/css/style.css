@@ -1,35 +1,59 @@
-/* =========================
-   Theme Variables
-========================= */
+
+/* =========================================================
+   WINDEDGESOFT - MAIN STYLESHEET
+   Modern Dark / Blue / Teal Theme
+========================================================= */
+
+
+/* =========================================================
+   1. THEME VARIABLES
+========================================================= */
 
 :root {
+    /* Backgrounds */
     --bg: #061018;
     --bg-dark: #03080d;
     --bg-soft: #0a1b26;
     --bg-card: rgba(255, 255, 255, 0.075);
 
+    /* Text */
     --text: #eaf8ff;
     --muted: #9bb4c2;
 
+    /* Brand Colors */
     --blue: #168cff;
     --teal: #19d3c5;
     --gold: #f5b942;
 
+    /* Borders */
     --border: rgba(255, 255, 255, 0.12);
     --border-teal: rgba(25, 211, 197, 0.3);
 
+    /* Shadows */
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
     --shadow-teal: 0 24px 70px rgba(25, 211, 197, 0.13);
 
+    /* Radius */
     --radius: 22px;
     --radius-lg: 28px;
 
+    /* Transitions */
     --transition: 0.28s ease;
+
+    /* Section Spacing */
+    --section-padding: 110px;
+    --section-padding-tablet: 90px;
+    --section-padding-mobile: 75px;
+
+    /* Layout */
+    --navbar-height: 76px;
+    --container-padding: 18px;
 }
 
-/* =========================
-   Base
-========================= */
+
+/* =========================================================
+   2. BASE STYLES
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -37,16 +61,31 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
     font-family: "Sora", sans-serif;
     color: var(--text);
     overflow-x: hidden;
+
     background:
-    radial-gradient(circle at top left, rgba(25, 211, 197, 0.16), transparent 30%),
-    radial-gradient(circle at top right, rgba(22, 140, 255, 0.18), transparent 34%),
-    linear-gradient(180deg, #061018 0%, #081722 45%, #050b11 100%);
+        radial-gradient(
+            circle at top left,
+            rgba(25, 211, 197, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(22, 140, 255, 0.18),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #061018 0%,
+            #081722 45%,
+            #050b11 100%
+        );
 }
 
 img {
@@ -62,9 +101,19 @@ a:hover {
     color: var(--gold);
 }
 
-/* =========================
-   Bootstrap Overrides
-========================= */
+button {
+    font-family: inherit;
+}
+
+::selection {
+    color: var(--bg-dark);
+    background: var(--teal);
+}
+
+
+/* =========================================================
+   3. BOOTSTRAP OVERRIDES
+========================================================= */
 
 .text-muted {
     color: var(--muted) !important;
@@ -93,7 +142,13 @@ a:hover {
 .btn-primary {
     color: #fff;
     border: 0;
-    background: linear-gradient(135deg, var(--blue), var(--teal));
+
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--teal)
+    );
+
     box-shadow: 0 12px 30px rgba(25, 211, 197, 0.25);
 }
 
@@ -130,15 +185,20 @@ a:hover {
     border-color: var(--gold);
 }
 
-/* =========================
-   Navbar
-========================= */
+
+/* =========================================================
+   4. NAVBAR
+========================================================= */
 
 #mainNav {
     padding: 14px 0;
+
     background: rgba(3, 8, 13, 0.78);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
     border-bottom: 1px solid var(--border);
+
     transition: var(--transition);
 }
 
@@ -155,6 +215,7 @@ a:hover {
 .navbar-brand span {
     background: linear-gradient(135deg, #fff, var(--teal));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -176,8 +237,15 @@ a:hover {
     left: 8px;
     right: 8px;
     bottom: 0;
+
     height: 2px;
-    background: linear-gradient(90deg, var(--teal), var(--gold));
+
+    background: linear-gradient(
+        90deg,
+        var(--teal),
+        var(--gold)
+    );
+
     transform: scaleX(0);
     transform-origin: left;
     transition: var(--transition);
@@ -188,12 +256,14 @@ a:hover {
     transform: scaleX(1);
 }
 
-/* =========================
-   Sections
-========================= */
+
+/* =========================================================
+   5. GLOBAL SECTION STYLES
+========================================================= */
 
 section {
     position: relative;
+    padding-block: var(--section-padding);
 }
 
 section h2 {
@@ -209,6 +279,7 @@ section .lead {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+
     color: var(--gold);
     font-size: 0.8rem;
     font-weight: 700;
@@ -220,12 +291,32 @@ section .lead {
     content: "";
     width: 34px;
     height: 2px;
-    background: linear-gradient(90deg, var(--teal), var(--gold));
+
+    background: linear-gradient(
+        90deg,
+        var(--teal),
+        var(--gold)
+    );
 }
 
-/* =========================
-   Hero
-========================= */
+
+/* Welcome language animation */
+
+.welcome-fade-out {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.welcome-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* =========================================================
+   6. HERO SECTIONS
+========================================================= */
 
 .hero,
 .hero-short {
@@ -236,18 +327,38 @@ section .lead {
 
 .hero {
     min-height: 100vh;
-    padding: 120px 18px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 130px var(--container-padding) 110px;
+
     background:
-    linear-gradient(rgba(3, 8, 13, 0.68), rgba(3, 8, 13, 0.88)),
-    radial-gradient(circle at 50% 30%, rgba(25, 211, 197, 0.22), transparent 35%) !important;
+        linear-gradient(
+            rgba(3, 8, 13, 0.68),
+            rgba(3, 8, 13, 0.88)
+        ),
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(25, 211, 197, 0.22),
+            transparent 35%
+        ) !important;
 }
 
 .hero-short {
-    padding-top: 150px !important;
-    padding-bottom: 90px !important;
+    padding-block: 110px;
+
     background:
-    linear-gradient(rgba(3, 8, 13, 0.76), rgba(3, 8, 13, 0.9)),
-    radial-gradient(circle at center, rgba(25, 211, 197, 0.22), transparent 38%) !important;
+        linear-gradient(
+            rgba(3, 8, 13, 0.76),
+            rgba(3, 8, 13, 0.9)
+        ),
+        radial-gradient(
+            circle at center,
+            rgba(25, 211, 197, 0.22),
+            transparent 38%
+        ) !important;
 }
 
 .hero::before,
@@ -256,9 +367,18 @@ section .lead {
     position: absolute;
     inset: 0;
     z-index: -1;
+
     background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        linear-gradient(
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        );
+
     background-size: 42px 42px;
     mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
@@ -283,9 +403,10 @@ section .lead {
     color: var(--muted);
 }
 
-/* =========================
-   Cards
-========================= */
+
+/* =========================================================
+   7. CARDS
+========================================================= */
 
 .card,
 .stat-card,
@@ -295,7 +416,9 @@ section .lead {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+
     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .card {
@@ -356,16 +479,19 @@ section .lead {
     border-top: 1px solid var(--border) !important;
 }
 
-/* =========================
-   CTA Sections
-========================= */
+
+/* =========================================================
+   8. CTA SECTIONS
+========================================================= */
 
 .cta-strip-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+
     padding: 30px;
+
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(25, 211, 197, 0.15);
@@ -388,14 +514,25 @@ section .lead {
 }
 
 .project-cta {
-    background: radial-gradient(circle at center, rgba(25, 211, 197, 0.08), transparent 60%);
+    background: radial-gradient(
+        circle at center,
+        rgba(25, 211, 197, 0.08),
+        transparent 60%
+    );
 }
 
 .final-cta-card {
     text-align: center;
     padding: 70px 40px;
+
     border-radius: 32px;
-    background: linear-gradient(135deg, rgba(22, 140, 255, 0.12), rgba(25, 211, 197, 0.12));
+
+    background: linear-gradient(
+        135deg,
+        rgba(22, 140, 255, 0.12),
+        rgba(25, 211, 197, 0.12)
+    );
+
     border: 1px solid rgba(25, 211, 197, 0.2);
     box-shadow: 0 0 50px rgba(25, 211, 197, 0.12);
 }
@@ -406,9 +543,10 @@ section .lead {
     color: var(--muted);
 }
 
-/* =========================
-   Process Cards
-========================= */
+
+/* =========================================================
+   9. PROCESS CARDS
+========================================================= */
 
 .process-card {
     position: relative;
@@ -421,21 +559,32 @@ section .lead {
     position: absolute;
     top: 15px;
     right: 20px;
+
     font-size: 3rem;
     font-weight: 800;
     line-height: 1;
+
     color: rgba(255, 255, 255, 0.05);
 }
 
 .process-icon {
     width: 70px;
     height: 70px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin: 0 auto 20px;
+
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(22, 140, 255, 0.2), rgba(25, 211, 197, 0.2));
+
+    background: linear-gradient(
+        135deg,
+        rgba(22, 140, 255, 0.2),
+        rgba(25, 211, 197, 0.2)
+    );
+
     border: 1px solid rgba(25, 211, 197, 0.15);
 }
 
@@ -453,12 +602,15 @@ section .lead {
 }
 
 @media (min-width: 992px) {
+
     .process-card::after {
         content: "→";
         position: absolute;
         right: -18px;
         top: 50%;
+
         transform: translateY(-50%);
+
         color: var(--gold);
         font-size: 1.5rem;
     }
@@ -468,14 +620,17 @@ section .lead {
     }
 }
 
-/* =========================
-   About Page
-========================= */
+
+/* =========================================================
+   10. ABOUT PAGE
+========================================================= */
 
 .about-image-wrap {
     padding: 10px;
+
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
+
     background: rgba(255, 255, 255, 0.055);
     box-shadow: var(--shadow);
 }
@@ -488,8 +643,12 @@ section .lead {
 
 .stats-section {
     background:
-    radial-gradient(circle at center, rgba(22, 140, 255, 0.12), transparent 42%),
-    rgba(255, 255, 255, 0.025);
+        radial-gradient(
+            circle at center,
+            rgba(22, 140, 255, 0.12),
+            transparent 42%
+        ),
+        rgba(255, 255, 255, 0.025);
 }
 
 .stat-card {
@@ -545,11 +704,14 @@ section .lead {
 .team-socials a {
     width: 38px;
     height: 38px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     color: var(--text);
     background: rgba(255, 255, 255, 0.075);
+
     border: 1px solid var(--border);
     border-radius: 50%;
 }
@@ -560,9 +722,10 @@ section .lead {
     transform: translateY(-3px);
 }
 
-/* =========================
-   Contact
-========================= */
+
+/* =========================================================
+   11. CONTACT
+========================================================= */
 
 #contact {
     overflow: hidden;
@@ -571,26 +734,38 @@ section .lead {
 #contact::before {
     content: "";
     position: absolute;
+
     width: 360px;
     height: 360px;
+
     right: -120px;
     bottom: -160px;
-    background: radial-gradient(circle, rgba(245, 185, 66, 0.16), transparent 65%);
+
+    background: radial-gradient(
+        circle,
+        rgba(245, 185, 66, 0.16),
+        transparent 65%
+    );
+
+    pointer-events: none;
 }
 
 .contact-btn {
     padding: 13px 24px;
 }
 
-/* =========================
-   Modals & Forms
-========================= */
+
+/* =========================================================
+   12. MODALS & FORMS
+========================================================= */
 
 .modal-content {
     color: var(--text);
     background: #07131d;
+
     border: 1px solid var(--border);
     border-radius: 24px;
+
     box-shadow: var(--shadow);
 }
 
@@ -603,26 +778,70 @@ section .lead {
     background: rgba(25, 211, 197, 0.12) !important;
 }
 
-.form-control {
+/* Input Fields */
+
+.form-control,
+.form-select {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.06);
+
     border: 1px solid var(--border);
+    border-radius: 12px;
+
+    transition: var(--transition);
 }
 
-.form-control:focus {
-    color: var(--text);
-    background: rgba(255, 255, 255, 0.08);
+/* Focus */
+
+.form-control:focus,
+.form-select:focus {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.09);
+
     border-color: var(--teal);
+
     box-shadow: 0 0 0 0.2rem rgba(25, 211, 197, 0.15);
+
+    outline: none;
 }
+
+/* Select */
+
+.form-select {
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+.form-select option {
+    color: var(--text);
+    background-color: #07131d;
+}
+
+/* Floating Labels */
 
 .form-floating label {
     color: var(--muted);
 }
 
-/* =========================
-   Footer
-========================= */
+/* Placeholder */
+
+.form-control::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+}
+
+/* Disabled */
+
+.form-control:disabled,
+.form-select:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
 
 .footer {
     border-top: 1px solid var(--border);
@@ -638,15 +857,425 @@ section .lead {
     padding-left: 4px;
 }
 
-/* =========================
-   Responsive
-========================= */
+
+/* =========================================================
+   14. MODERN PROJECT SHOWCASE
+========================================================= */
+
+.project-showcase {
+    background:
+        radial-gradient(
+            circle at 5% 20%,
+            rgba(25, 211, 197, 0.055),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 95% 65%,
+            rgba(22, 140, 255, 0.07),
+            transparent 32%
+        );
+}
+
+.project-heading {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.project-heading-title {
+    margin-top: 20px;
+
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.065em;
+}
+
+.project-heading-title span {
+    background: linear-gradient(
+        120deg,
+        var(--teal),
+        var(--blue),
+        var(--gold)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-heading-description {
+    max-width: 620px;
+    margin: 20px auto 0;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.project-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.project-stats strong {
+    color: var(--teal);
+    font-size: 1rem;
+}
+
+.project-stats i {
+    color: var(--gold);
+    margin-right: 5px;
+}
+
+.project-stats-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--border);
+}
+
+
+/* Project Filters */
+
+.project-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-filter {
+    padding: 11px 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--muted);
+
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-filter:hover,
+.project-filter.active {
+    color: var(--teal);
+    background: rgba(25, 211, 197, 0.1);
+    border-color: var(--border-teal);
+}
+
+.project-filter span {
+    margin-left: 5px;
+    font-size: 0.7rem;
+}
+
+
+/* Project Cards */
+
+.project-showcase-card {
+    height: 100%;
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    background: var(--bg-card);
+
+    transition: var(--transition);
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(25, 211, 197, 0.4);
+    box-shadow: var(--shadow-teal);
+}
+
+
+/* Project Images */
+
+.project-image-wrap {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    background: var(--bg-soft);
+}
+
+.project-image-wrap > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.project-showcase-card:hover .project-image-wrap > img {
+    transform: scale(1.06);
+}
+
+
+/* Project Status */
+
+.project-status {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+
+    background: rgba(3, 8, 13, 0.82);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+.project-status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.status-live span {
+    background: var(--teal);
+}
+
+.status-progress span {
+    background: var(--blue);
+}
+
+.status-upcoming span {
+    background: var(--gold);
+}
+
+
+/* Project Image Overlay */
+
+.project-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 22px;
+
+    background: linear-gradient(
+        to top,
+        rgba(3, 8, 13, 0.95),
+        rgba(3, 8, 13, 0.05) 80%
+    );
+
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-showcase-card:hover .project-image-overlay,
+.project-showcase-card:focus-within .project-image-overlay {
+    opacity: 1;
+}
+
+.project-image-overlay > span {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.project-view-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--teal);
+    border-radius: 999px;
+
+    background: var(--teal);
+    color: var(--bg-dark);
+
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-view-button:hover {
+    background: #fff;
+    border-color: #fff;
+}
+
+
+/* Project Information */
+
+.project-content {
+    padding: 27px;
+}
+
+.project-content-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.project-category {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--teal);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.project-content h3 {
+    margin: 0;
+
+    color: #fff;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.project-index {
+    color: rgba(255, 255, 255, 0.13);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.project-content > p {
+    margin: 17px 0 22px;
+
+    color: var(--muted);
+    font-size: 0.86rem;
+    line-height: 1.8;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    padding: 7px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 500;
+}
+
+
+/* Project Filter Animation */
+
+.project-item {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-item.is-hidden {
+    display: none;
+}
+
+
+/* Project Bottom CTA */
+
+.project-bottom-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 35px 40px;
+
+    border: 1px solid var(--border-teal);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        120deg,
+        rgba(25, 211, 197, 0.08),
+        rgba(22, 140, 255, 0.08)
+    );
+}
+
+.project-bottom-cta > div > span {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.project-bottom-cta h3 {
+    margin: 9px 0;
+
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.project-bottom-cta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   15. RESPONSIVE STYLES
+========================================================= */
+
+
+/* Tablets and Smaller Laptops */
 
 @media (max-width: 991px) {
+
+    :root {
+        --section-padding: var(--section-padding-tablet);
+    }
+
     .navbar-collapse {
         margin-top: 14px;
         padding: 16px;
+
         background: rgba(3, 8, 13, 0.96);
+
         border: 1px solid var(--border);
         border-radius: 18px;
     }
@@ -666,9 +1295,21 @@ section .lead {
     }
 }
 
-@media (max-width: 768px) {
+
+/* Mobile Devices */
+
+@media (max-width: 767px) {
+
+    :root {
+        --section-padding: var(--section-padding-mobile);
+    }
+
+    /* Hero */
+
     .hero {
+        min-height: 90vh;
         padding-top: 110px;
+        padding-bottom: 75px;
     }
 
     .hero h1 {
@@ -680,13 +1321,14 @@ section .lead {
     }
 
     .hero-short {
-        padding-top: 120px !important;
-        padding-bottom: 70px !important;
+        padding-block: 85px;
     }
 
     .hero-short h1 {
         font-size: 2rem;
     }
+
+    /* Cards */
 
     .card-body {
         padding: 22px;
@@ -703,12 +1345,56 @@ section .lead {
     .stat-card h3 {
         font-size: 2.4rem;
     }
+
+    /* Project Showcase */
+
+    .project-image-wrap {
+        height: 230px;
+    }
+
+    .project-image-overlay {
+        opacity: 1;
+        padding: 15px;
+    }
+
+    .project-image-overlay > span {
+        font-size: 0.6rem;
+    }
+
+    .project-view-button {
+        padding: 9px 12px;
+        font-size: 0.65rem;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-bottom-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 27px;
+    }
+
+    .project-filters {
+        gap: 8px;
+    }
+
+    .project-filter {
+        padding: 9px 14px;
+        font-size: 0.72rem;
+    }
+
+    .project-stats {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 }
 
+
+/* Small Mobile Devices */
+
 @media (max-width: 480px) {
-    .hero {
-        padding-top: 105px;
-    }
 
     .hero h1 {
         font-size: 2rem;
@@ -721,5 +1407,25 @@ section .lead {
 
     .process-card {
         padding: 30px 22px;
+    }
+}
+
+
+/* =========================================================
+   16. ACCESSIBILITY & REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
